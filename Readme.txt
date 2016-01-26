@@ -2,6 +2,7 @@
 http://www.spice-space.org/page/PlannedFeatures
 http://www.spinics.net/lists/spice-devel/msg07812.html
 http://lists.freedesktop.org/archives/spice-devel/2014-April/016582.html
+https://elmarco.fedorapeople.org/
 
 需要编译spicec for Windows
 
