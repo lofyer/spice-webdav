@@ -1,3 +1,8 @@
+UPDATE 2017-07：
+1. Install and enable spice-webdavd service in guests from https://www.spice-space.org/download/windows/spice-webdavd/
+2. Download virt-viewer from http://virt-mamanger.org, "Run as Administrator" remote-viewer
+3. Select folder to be shared.
+
 参考
 http://www.spice-space.org/page/PlannedFeatures
 http://www.spinics.net/lists/spice-devel/msg07812.html
