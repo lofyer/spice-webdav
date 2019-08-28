@@ -3,7 +3,7 @@
 2. Download virt-viewer in client from http://virt-manager.org, "Run as Administrator" remote-viewer
 3. Select folder to be shared.
 
-# guest libvirt xml
+# Guest libvirt xml
 Add the following section in `<devices>...</devices>`:
 ```
 <channel type='spiceport'>
@@ -12,15 +12,15 @@ Add the following section in `<devices>...</devices>`:
 </channel>
 ```
 
-## a) in Windows guest (Depends):
-1. Install and ENABLE spice-webdavd SERVICE in WINDOWS guest from https://www.spice-space.org/download/windows/spice-webdavd/
+## a) in Windows guest OS:
+1. Disable Windows Firewall
 
-2. Disable Windows Firewall
+2. As Administrator, Install spice-webdavd in Windows guest from https://www.spice-space.org/download/windows/spice-webdavd/, and enable spice-webdavd service from task manager.
 
 3. If not as a service, please manually run `map-drive.bat` from Program Files/Spice webdav/
 
-## b) in Linux guest (Depends):
-It's similar to Windows guest, but you should build webdav-agent by yourself:
+## b) in Linux guest OS:
+It's similar to Windows guest, but you should build and run webdav-agent by yourself:
 ```
 git clone phodav from upstream
 yum -y install gnome-common  gcc gcc-c++ automake autoconf libtool
@@ -28,12 +28,8 @@ intltool gtk-doc glib2-devel libsoup-devel libxml-devel
 ./autogen.sh
 make
 make install
+spice-webdavd -p 8000
 ```
-
-After these manually run:
-
-`spice-webdavd -p 8000`
-
 ## In your virt-viewer client
 The Spice client can share a folder with the remote guest. By default folder sharing is disabled. Use the remote-viewer "File" → "Preferences" menu to enable it. The default shared directory is the XDG Public Share directory (ie ~/Public if you use a regular system). You may specify a different folder with --spice-share-dir client option.
 
