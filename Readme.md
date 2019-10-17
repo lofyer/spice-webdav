@@ -19,6 +19,8 @@ Add the following section in `<devices>...</devices>`:
 
 3. If not as a service, please manually run `map-drive.bat` from Program Files/Spice webdav/
 
+4. You MAY need re-compile the https://gitlab.gnome.org/GNOME/phodav via mingw or just change another version of spice-webdav.msi.
+
 ## b) in Linux guest OS:
 It's similar to Windows guest, but you should build and run webdav-agent by yourself:
 ```
