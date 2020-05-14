@@ -13,13 +13,11 @@ Add the following section in `<devices>...</devices>`:
 ```
 
 ## a) in Windows guest OS:
-1. Disable Windows Firewall
+1. As Administrator, Install spice-webdavd in Windows guest from https://www.spice-space.org/download/windows/spice-webdavd/, and enable spice-webdavd service from task manager.
 
-2. As Administrator, Install spice-webdavd in Windows guest from https://www.spice-space.org/download/windows/spice-webdavd/, and enable spice-webdavd service from task manager.
+2. If not as a service, please manually run `map-drive.bat` from Program Files/Spice webdav/
 
-3. If not as a service, please manually run `map-drive.bat` from Program Files/Spice webdav/
-
-4. You MAY need re-compile the https://gitlab.gnome.org/GNOME/phodav via mingw or just change another version of spice-webdav.msi.
+3. Go to control panel and open up "Internet Options", from there go to the "Connections" tab and click the "LAN settings" button, then uncheck “Automatically detect settings”, click ok and apply. This step should fix huge lag that might occur without it.
 
 ## b) in Linux guest OS:
 It's similar to Windows guest, but you should build and run webdav-agent by yourself:
